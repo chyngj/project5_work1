@@ -1,0 +1,126 @@
+1. git으로 관리할 경로까지 이동 - cd: 이 명령어는 사용자가 현재 작업 중인 디렉토리를 변경하는 데 사용
+                                디렉토리 : '폴더'와 동일한 개념
+
+ file에                                
+
+2. 초기화
+git init (하면 git 폴더 생성됨 - 기본적으로 숨겨져있음, git로 관리하기 위해 필요한 파일)
+
+ls -a 모든 파일과 디렉토리를 나열하는 명령어
+ls -al 디렉토리의 모든 파일과 디렉토리(숨김 파일 포함)를 자세한 정보와 함께 나열하는 명령어
+
+.git 폴더 삭제 (rm -rf .git)  : 만들어 논 거 날리는 거임 (main이 없어짐ㅡgit으로 관리하는 폴더가 아님)
+
+3. 브랜치 이름 기본값 변경하기(master 일때)
+git config --global init.defaultBranch main  : (main) 으로 뜨게 해줌
+
+4. git 상태확인
+git status : 현재 작업 중인 저장소의 상태를 확인
+
+[ 저장. push pull 할때, 파일을 주고 받을 때 사전에 저장해야한다. ]
+5. git으로 관리하는 파일로 추가
+git add .
+
+6. commit (해당 시점을 저장)
+git commit -m "커밋 메세지"
+
+7. commit 이전에 계정정보 등록 (--global 옵션은 해당 컴퓨터 전체에 적용. 일단 global 빼라) / git add . 전에 해야하는 것 같은데
+git config --global user.name "Your Name"
+git config --global user.email you@example.com
+
+git config list  계정이 등록됐는 지 확인하기 위한 코드 (q 를 치면 빠져 나올 수 있다.)
+
+git config --global --unset user.name "Your Name"             ---밑에거랑 이거 완성본보고 수정하기
+git config --global --unset user.email you@example.com
+
+8. commit 정보확인
+git log
+
+9. 과제 
+project/test1을 생성
+git으로 관리
+파일생성은 알아서..최소 커밋의 수는 5번 이상이 되도록 하세요
+
+
+----------------------------------------------------------------
+
+
+로컬 컴퓨터(코드있음)와 github 사이트(비어있음) 연결
+1. remote 정보 확인
+  git remote
+  git remote -v 
+
+2. remote 추가
+git remote add 리모트이름 github리파지토리주소
+git remote add origin https://github.com/shimseonjo/project5_work1.git
+
+3. remote 삭제
+git remote rm 리모트이름
+git remote rm origin
+
+4. github 데이터 넣기
+git push -u origin main
+git push
+
+---------------------------
+clone 
+- 코드가 없는 상태에서 전체 코드를 다운로드 받을 경우
+
+
+---------------------------
+pull 
+- 코드가 있는 상태에서 변경된 부분만 받을 경우
+
+-----------------------------------------------
+1. remote 정보확인
+    git remote
+    git remote -v
+    자잦ㅈㅈㅈ
+
+2. git hub ㅎㅎㅎ
+
+
+3. git push origin main
+
+
+4. 충돌 시, 깃허브에서 먼저 git pull로 받고 git push로 보내야한다..
+
+---------------------------------------------------------
+
+브랜치 작성
+- 브랜치 목록 확인
+git branch
+
+*있는게 현재 branch
+
+- 브랜치 생성
+git branch test01
+
+- 브랜치 이동
+git switch test01
+
+- 브랜치에서 소스 코딩, add, commit 작업 진행
+
+------------------------------
+브랜치 병합
+-main에서(main으로 코드 합류)
+git merge 브랜치명
+git add .
+git commit -m "메시지"
+
+브랜치 삭제
+git branch -d 브랜치명
+
+브랜치 복구
+git branch 브랜치명 커밋번호
+
+git log --graph --oneline
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+팀으로 작업하기
+
+- Collaborators 등록해서 하는 법
+- pr 발행해서 하는 법
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
