@@ -54,7 +54,7 @@ git으로 관리
 git remote add 리모트이름 github리파지토리주소
 git remote add origin https://github.com/shimseonjo/project5_work1.git
 
-3. remote 삭제
+3. remote 삭제9
 git remote rm 리모트이름
 git remote rm origin
 
